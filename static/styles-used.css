@@ -1,0 +1,283 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+.container {
+    max-width: 75%;
+    margin: 0 auto
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: 1rem;
+    line-height: 1
+}
+
+h1 {
+    line-height: 1.5;
+    font-size: 1.2rem
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%
+}
+
+img {
+    vertical-align: middle
+}
+
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+[hidden] {
+    display: none !important
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+    cursor: pointer
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        scroll-behavior: smooth
+    }
+}
+
+.h-100 {
+    min-height: 100%
+}
+
+.mhv-100 {
+    min-height: 100vh
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        max-width: 540px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 720px
+    }
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 1140
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .container {
+        max-width: 1320
+    }
+}
+
+.d-flex {
+    display: flex
+}
+
+.flex-row {
+    flex-direction: row
+}
+
+.flex-col {
+    flex-direction: column
+}
+
+.align-items-center {
+    align-items: center
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.text-center {
+    text-align: center
+}
+
+.fw-1 {
+    font-weight: 100
+}
+
+.fw-2 {
+    font-weight: 200
+}
+
+.fw-3 {
+    font-weight: 300
+}
+
+.fw-4 {
+    font-weight: 400
+}
+
+.fw-5 {
+    font-weight: 500
+}
+
+.fw-6 {
+    font-weight: 600
+}
+
+.fw-7 {
+    font-weight: 700
+}
+
+.fw-8 {
+    font-weight: 800
+}
+
+.fw-9 {
+    font-weight: 900
+}
+
+.rounded {
+    border-radius: 50%
+}
+
+.overflow-hidden {
+    overflow: hidden
+}
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%)
+}
+
+:is(.tool-tip) {
+    position: relative;
+    overflow: visible
+}
+
+:is(.tool-tip)::after {
+    content: attr(data-tip);
+    padding: .2em .3em;
+    border-radius: .3em;
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #000;
+    font-size: .6em;
+    visibility: hidden;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    transition: 250ms visibility ease-in-out
+}
+
+:is(.tool-tip).left::after {
+    left: 0
+}
+
+:is(.tool-tip).top::after {
+    top: 0
+}
+
+:is(.tool-tip).right::after {
+    right: 0
+}
+
+:is(.tool-tip).bottom::after {
+    bottom: 0
+}
+
+:is(.tool-tip).center::after {
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+:is(.tool-tip):hover::after {
+    visibility: visible
+}
+
+body {
+    background: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position-x: -25rem, 35rem;
+    background-position-y: -25rem, 25rem;
+    background-size: auto, auto;
+    background-color: var(--Dark-cyan);
+    font-family: "Kumbh Sans", sans-serif
+}
+
+.text-dark-blue {
+    color: var(--Very-dark-desaturated-blue)
+}
+
+.text-grey {
+    color: var(--Dark-gray)
+}
+
+.card {
+    width: 350px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: url(../images/bg-pattern-card.svg) no-repeat top center;
+    background-color: #fff;
+    gap: 1rem
+}
+
+.card .user {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem
+}
+
+.card .user .user__pic {
+    border: 5px solid #fff
+}
+
+.card .user .user__details {
+    gap: .5rem;
+    margin-top: .8rem
+}
+
+.card .user__statistics {
+    border-top: 1px solid var(--Dark-gray);
+    width: 100%;
+    padding: .5rem;
+    justify-content: space-around
+}
